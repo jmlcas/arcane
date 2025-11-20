@@ -1,6 +1,6 @@
 # Arcane
 
-Usar el "Generador de Docker-compose": https://arcane.ofkm.dev/generator
+Usar el "Generador de Docker-compose": https://getarcane.app - Opción "Compose Generator" del menú superior
 
 Ver en "http://localhost:3552"
 
