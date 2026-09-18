@@ -10,7 +10,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./arcane-data:/app/data
       # Optional host project mount:
-      # - /path/to/projects:/app/data/projects      
+      # - /path/to/projects:/app/data/projects
     environment:
       - PUID=1000
       - PGID=1000
