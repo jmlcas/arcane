@@ -1,7 +1,7 @@
 services:
 
   arcane:
-    image: ghcr.io/getarcaneapp/arcane:latest
+    image: ghcr.io/getarcaneapp/manager:latest
     container_name: arcane
     restart: unless-stopped
     ports:
@@ -9,11 +9,11 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./arcane-data:/app/data
+      # Optional host project mount:
+      # - /path/to/projects:/app/data/projects      
     environment:
       - PUID=1000
       - PGID=1000
       - APP_URL=http://localhost:3552
       - ENCRYPTION_KEY=973f2d5193189c0c96d1b1d2d5cc6e406b9eaf7d3af82d6222f66e011364c107
-      - JWT_SECRET=ebb0ffc4064b5aef135e15754816badad446b6b1e117508cd446bc7de60fec16
-      - DATABASE_URL=file:data/arcane.db?_pragma=journal_mode(WAL)&_pragma=busy_timeout(2500)&_txlock=immediate
-    
+    cgroup: host 
