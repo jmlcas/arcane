@@ -14,6 +14,7 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
+      - TZ=Europe/Madrid
       - APP_URL=http://localhost:3552
       - ENCRYPTION_KEY=973f2d5193189c0c96d1b1d2d5cc6e406b9eaf7d3af82d6222f66e011364c107
     cgroup: host
